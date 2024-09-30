@@ -19,8 +19,8 @@ jobs:
 
     - name: Build and tag Docker image
       run: |
-        docker build -t ghcr.io/AndyGolightly/BCM3docker:latest ./docker
+        docker build -t ghcr.io/AndyGolightly/bcm3docker:latest ./docker
 
     - name: Push Docker image to GHCR
       run: |
-        docker push --all-tags ghcr.io/AndyGolightly/BCM3docker
+        docker push --all-tags ghcr.io/AndyGolightly/bcm3docker
