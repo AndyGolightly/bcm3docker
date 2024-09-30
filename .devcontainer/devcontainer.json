@@ -1,6 +1,6 @@
 {
   "name": "${localWorkspaceFolderBasename}_v1.0.0",
-  "image": "ghcr.io/AndyGolightly/BCM3docker:latest",
+  "image": "ghcr.io/AndyGolightly/bcm3docker:latest",
   "forwardPorts": [8787],
   "portsAttributes": {
     "8787": {
