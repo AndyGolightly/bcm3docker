@@ -37,7 +37,8 @@ RUN Rscript -e 'install.packages("codetools")' \
     && Rscript -e 'install.packages("markdown")' \
     && Rscript -e 'install.packages("rmarkdown")' \
     && Rscript -e 'install.packages("tidyverse")' \
-    && Rscript -e 'install.packages("mcmcse")'
+    && Rscript -e 'install.packages("mcmcse")' \
+    && Rscript -e 'install.packages("durhamSLR",repos = c(CRAN = "https://cloud.r-project.org",nseg4 = "https://nseg4.r-universe.dev")))'
 
 ## Install git and RStudio Server
 RUN apt-get install --yes --no-install-recommends gdebi-core git-all \
