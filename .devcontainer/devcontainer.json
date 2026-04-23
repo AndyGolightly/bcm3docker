@@ -8,5 +8,6 @@
       "requireLocalPort": true,
       "onAutoForward": "ignore"
     }
-  }
+  },
+  "postStartCommand": "rstudio-server start"
 }
