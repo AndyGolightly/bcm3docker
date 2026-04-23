@@ -8,6 +8,5 @@
       "requireLocalPort": true,
       "onAutoForward": "ignore"
     }
-  },
-  "postAttachCommand": "sudo rstudio-server start"
+  }
 }
