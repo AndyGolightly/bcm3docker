@@ -32,6 +32,8 @@ RUN Rscript -e 'install.packages("codetools")' \
     && Rscript -e 'install.packages("ggplot2")' \
     && Rscript -e 'install.packages("coda")' \
     && Rscript -e 'install.packages("loo")' \
+    && Rscript -e 'install.packages("StanHeaders", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))' \
+    && Rscript -e 'install.packages("RcppParallel", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))' \
     && Rscript -e 'install.packages("rstan", repos = c("https://stan-dev.r-universe.dev", getOption("repos")))' \
     && Rscript -e 'install.packages("commonmark")' \
     && Rscript -e 'install.packages("markdown")' \
