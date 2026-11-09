@@ -30,14 +30,14 @@ RUN Rscript -e 'install.packages("codetools")' \
     && Rscript -e 'install.packages("RcppEigen", repos="https://cloud.r-project.org")' \
     && Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")' \
     && Rscript -e 'remotes::install_version("RcppParallel", version="5.1.5", repos="https://cloud.r-project.org")' \
-    && Rscript -e 'remotes::install_version("StanHeaders", version="2.26.13", repos="https://cloud.r-project.org")' \
+    && Rscript -e 'remotes::install_version("StanHeaders", version="2.26.13", repos="https://cloud.r-project.org", dependencies=FALSE)' \
     && Rscript -e 'remotes::install_version("rstan", version="2.26.13", repos="https://cloud.r-project.org", dependencies=FALSE)' \
     && Rscript -e 'install.packages("commonmark")' \
     && Rscript -e 'install.packages("markdown")' \
     && Rscript -e 'install.packages("rmarkdown")' \
     && Rscript -e 'install.packages("tidyverse")' \
     && Rscript -e 'install.packages("mcmcse")' \
-    && Rscript -e 'install.packages("durhamSLR",repos = c(CRAN = "https://cloud.r-project.org",nseg4 = "https://nseg4.r-universe.dev",getOption("repos")))'
+    && Rscript -e 'install.packages("durhamSLR", repos=c(CRAN="https://cloud.r-project.org", nseg4="https://nseg4.r-universe.dev", getOption("repos")))'
 
 ## Install git and RStudio Server
 RUN apt-get install --yes --no-install-recommends gdebi-core git-all \
