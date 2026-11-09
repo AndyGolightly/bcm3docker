@@ -27,12 +27,12 @@ RUN apt-get install --yes --no-install-recommends wget ca-certificates gnupg \
 ## Setup R
 RUN Rscript -e 'install.packages("codetools")' \
     && Rscript -e 'install.packages("V8")' \
-    && Rscript -e 'install.packages("RcppEigen")' \
-    && Rscript -e 'install.packages("data.table")' \
-    && Rscript -e 'install.packages("ggplot2")' \
-    && Rscript -e 'install.packages("coda")' \
-    && Rscript -e 'install.packages("loo")' \
-    && Rscript -e 'install.packages("rstan", repos = c("https://mc-stan.org/r-packages/", getOption("repos")), version = "2.26.13")' \
+    && Rscript -e 'install.packages("RcppEigen", repos="https://cloud.r-project.org")' \
+    && Rscript -e 'install.packages("RcppParallel", repos="https://cloud.r-project.org")' \
+    && Rscript -e 'install.packages("remotes", repos="https://cloud.r-project.org")' \
+    && Rscript -e 'remotes::install_version("RcppParallel", version="5.1.5", repos="https://cloud.r-project.org")' \
+    && Rscript -e 'remotes::install_version("StanHeaders", version="2.26.13", repos="https://cloud.r-project.org")' \
+    && Rscript -e 'remotes::install_version("rstan", version="2.26.13", repos="https://cloud.r-project.org", dependencies=FALSE)' \
     && Rscript -e 'install.packages("commonmark")' \
     && Rscript -e 'install.packages("markdown")' \
     && Rscript -e 'install.packages("rmarkdown")' \
