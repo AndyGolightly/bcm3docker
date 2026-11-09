@@ -15,7 +15,7 @@ ENV TZ UTC
 
 ## Setup deb packages
 RUN apt-get install --yes --no-install-recommends wget ca-certificates gnupg \
-    && apt-get install --yes --no-install-recommends python3-dbus python3-gi python3-apt make cmake \
+    && apt-get install --yes --no-install-recommends python3-dbus python3-gi python3-apt make \
     && apt-get install --yes --no-install-recommends libcurl4-openssl-dev libv8-dev gcc libxml2-dev libfontconfig1-dev \
     && apt-get install --yes --no-install-recommends libharfbuzz-dev libfribidi-dev \
     && apt-get install --yes --no-install-recommends libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev \
